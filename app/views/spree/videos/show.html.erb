@@ -2,16 +2,11 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= image_tag(@video.youtube_data.thumbnails.first.url) %>
+<%= image_tag(@video.youtube_data.thumbnail_url) %>
 
 <p>
   <b>Title:</b>
   <%= @video.youtube_data.title %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @video.youtube_data.author.name %>
 </p>
 
 <p>
@@ -27,4 +22,3 @@
 <p>
   <%= raw @video.youtube_data.embed_html %>
 </p>
-
