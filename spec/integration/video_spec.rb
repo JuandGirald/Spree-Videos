@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'video display' do
-  before { @product = create :product, :on_hand => 1, :name => "The Product" }
+  before { @product = create :product, :name => "The Product" }
   let(:product) { @product }
 
   it "should display no video player when no videos exist" do

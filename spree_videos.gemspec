@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_videos'
-  s.version     = '1.3.0'
+  s.version     = '1.4.0'
   s.summary     = 'Adds youtube videos to Spree commerce products'
   s.description = 'Add multiuple youtube videos, and a thumbnail selector' +
                   'for those products to a Spree commerce product'
@@ -15,12 +15,12 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 3.0.0'
-  s.add_dependency 'youtube_it', '~> 2'
-
+  s.add_dependency 'yt', '~> 0.24.7'
+  
   # test suite
-  s.add_development_dependency 'capybara', '~> 1.1'
-  s.add_development_dependency 'factory_girl_rails', '~> 3.0.0'
-  s.add_development_dependency 'rspec-rails',  '~> 2.9'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'factory_girl_rails'
+  s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'shoulda-matchers'

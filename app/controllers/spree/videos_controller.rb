@@ -13,7 +13,7 @@ module Spree
 
     def show
       @video = Video.find(params[:id])
-      client = YouTubeIt::Client.new
+      client = Yt::Account.new
     end
   end
 end

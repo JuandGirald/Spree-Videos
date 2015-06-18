@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe 'admin functionality', js: true do
-  stub_authorization!
+  #stub_authorization!
 
-  before { @product = create :product, :on_hand => 1, :name => "The Product" }
+  before { @product = create :product, :name => "The Product" }
   let(:product) { @product }
 
   it "should list videos associated with a product" do
