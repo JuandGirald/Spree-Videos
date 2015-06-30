@@ -28,6 +28,10 @@ module Spree
       def set_product
         @video.watchable = @product
       end
+
+      def video_params
+        params.require(:video).permit(:youtube_ref)
+      end
     end
   end
 end

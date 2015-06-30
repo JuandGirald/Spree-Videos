@@ -15,5 +15,10 @@ module Spree
       video = Video.find(params[:id])
       client = YouTubeIt::Client.new
     end
+
+    private
+    def video_params
+      params.require(:video).permit(:youtube_ref)
+    end
   end
 end
