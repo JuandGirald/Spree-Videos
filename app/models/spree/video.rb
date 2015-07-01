@@ -6,7 +6,8 @@ module Spree
     validates_uniqueness_of :youtube_ref, :scope => [:watchable_id, :watchable_type]
 
     def youtube_data
-      YouTubeIt::Client.new.video_by(youtube_ref)
+      client = YouTubeIt::OAuth2Client.new(dev_key: 'AIzaSyD1Igv4uTdwf_M2ZIZlFuMbmMBedLjnCsI')
+      video = client.video_by(youtube_ref)
     end
   
     after_validation do
